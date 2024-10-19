@@ -90,18 +90,7 @@ def query_engine(query, top_n=3, similarity_metric='cosine'):
     return answer
 
 # Simple chat function
-def chatbot():
-    print("Welcome to the Document-based Chatbot! Type 'exit' to quit.\n")
-
-    while True:
-        user_input = input("You: ")
-        if user_input.lower() in ['exit', 'quit']:
-            print("Chatbot: Goodbye!")
-            break
-
+def chatbot(user_input):
         # Ask the question to the query engine
         response = query_engine(user_input, top_n=3, similarity_metric='cosine')
-        print(f"Chatbot: {response}\n")
-
-# Run the chatbot
-chatbot()
+        return response
