@@ -1,7 +1,7 @@
-from sentence_transformers import SentenceTransformer
 import os
 import numpy as np
 import pickle
+from sentence_transformers import SentenceTransformer
 
 # Set file paths for loading embeddings
 embedding_file = "saved_embeddings.npy"
@@ -10,8 +10,8 @@ chunks_file = "saved_chunks.pkl"
 # Load embeddings and chunks
 if os.path.exists(embedding_file) and os.path.exists(chunks_file):
     print("Loading saved embeddings and chunks...")
-    chunk_embeddings = np.load(embedding_file)  # Load embeddings as binary
-    with open(chunks_file, 'rb') as f:          # Load chunks with pickle in binary mode
+    chunk_embeddings = np.load(embedding_file)
+    with open(chunks_file, 'rb') as f:
         chunks = pickle.load(f)
 else:
     raise FileNotFoundError("Embeddings or chunks file not found. Run `prepare_embeddings.py` first to generate them.")
