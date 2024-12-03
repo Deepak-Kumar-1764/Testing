@@ -1,0 +1,169 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #0d0267, #4f4ff5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+header {
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px 0;
+}
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: #333;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  width: 100%;
+}
+
+.container {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  padding: 40px 30px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.container h1 {
+  font-size: 2.2rem;
+  color: #0d0267;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.container p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.container .input-field {
+  width: 100%;
+  padding: 12px;
+  margin: 15px 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.container .input-field:focus {
+  border-color: #4f4ff5;
+  outline: none;
+  box-shadow: 0 0 8px rgba(79, 79, 245, 0.2);
+}
+
+.container .btn {
+  width: 100%;
+  padding: 12px;
+  margin: 15px 0;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.container .btn.btn-login {
+  background-color: #4f4ff5;
+  color: #fff;
+}
+
+.container .btn.btn-login:hover {
+  background-color: #0d0267;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(13, 2, 103, 0.3);
+}
+
+.container .btn.btn-register {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.container .btn.btn-register:hover {
+  background-color: #218838;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(33, 136, 56, 0.3);
+}
+
+.container .btn.btn-logout {
+  background-color: #f44336;
+  color: #fff;
+}
+
+.container .btn.btn-logout:hover {
+  background-color: #d32f2f;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(211, 47, 47, 0.3);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.flash-messages {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #ccc;
+  z-index: 1000;
+  text-align: center;
+}
+
+.flash {
+  margin: 0;
+  padding: 10px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.flash.info {
+  color: #31708f;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}
+
+.flash.error {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+.button {
+  font-size: 1.5rem;
+  color: blue;
+  position: absolute;
+  bottom: 40px; /* Distance from the bottom */
+  right: 50px; /* Distance from the right */
+  text-decoration: none;
+
+}
+/* Add additional styles for different flash message categories as needed */
+

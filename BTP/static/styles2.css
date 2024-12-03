@@ -1,0 +1,294 @@
+body {
+  background-color: #1B3159;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  text-align: center;
+  overflow: hidden; /* Disable scrolling for the entire body */
+  height: 100vh; /* Make the body fit the viewport height */
+}
+
+ body h1 {
+   color: #0d0267;
+   font-size: 50px;
+   margin-top: 13px;
+ }
+ 
+ .messages {
+ margin-top: -10px;
+ list-style-type: none;
+ padding: 0;
+ }
+ 
+ body .image{
+   margin-top: 30px;
+ }
+ img {
+  width:170px;
+  height:170px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+ }
+ 
+ /* styles.css */
+ .messages span.error {
+ font-size: larger;
+ color: red;
+ }
+ 
+ .messages span.success {
+ font-size: larger;
+ color: rgb(96, 154, 10);
+ }
+ 
+ body .content{
+   background-color: wheat;
+   width: 750px;
+   height: 250px;
+   margin-top: 0px;
+   border-radius: 10px;
+   padding: 20px;
+ } 
+ 
+ form input[type="text"] {
+   border: 1px solid #ddd;
+   padding: 10px;
+   border-radius: 5px;
+   margin-top: -13px;
+   width: calc(80% - 22px);
+   border-color: rgb(10, 81, 255);
+ }
+ 
+  form input[type="submit"] {
+   background-color: #0d0267;
+   border: none;
+   color: #fff;
+   width: calc(10% - 22px);
+ 
+   position: absolute;
+   padding: 7px;
+   margin-top: 70px ;
+   margin-left: -380px;
+   border-radius: 5px;
+   cursor: pointer;
+   font-size: 16px;
+ 
+ }
+ 
+ form input[type="submit"]:hover {
+   background-color: #310693;
+ }
+ 
+ /* Logout button styling */
+ 
+ body #logout {
+   position: absolute;
+   top: 25px;
+   right: 50px;
+   font-size: 16px;
+   font-family: Arial, sans-serif;
+   background: linear-gradient(45deg, #ff416c, #ff4b2b); /* Modern gradient */
+   color: #ffffff;
+   text-decoration: none; /* Removes underline */
+   padding: 10px 20px;
+   border: none;
+   border-radius: 8px; /* Smooth corners */
+   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+   cursor: pointer;
+   transition: all 0.3s ease; /* Smooth hover effects */
+ }
+ 
+ body #logout:hover {
+   background: linear-gradient(45deg, #ff4b2b, #ff416c); /* Reverse gradient on hover */
+   transform: scale(1.05); /* Slight zoom on hover */
+   box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+ }
+ 
+ body #logout:active {
+   transform: scale(0.95); /* Click effect */
+   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow on click */
+ }
+ 
+ /*Chat style*/
+/*Chat style*/
+body .image1 {
+  margin: 0 auto; /* Center the container */
+ 
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+  width: 100px; /* Set the width of the box */
+  height: 80px; /* Set the height of the box */
+  border-radius: 8px; /* Optional: Rounded corners */
+  overflow: hidden; /* Ensures the image doesn't overflow the box */
+  
+}
+
+body .image1 img {
+  width: 75%; /* Make the image responsive to the box's width */
+  height: 100%; /* Fill the box's height */
+  object-fit: cover; /* Ensures the image covers the box while maintaining aspect ratio */
+  border-radius: inherit; /* Match the box's rounded corners, if any */
+}
+
+ body .chathead {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-between; /* Space between logo, h1, and logout */
+   padding: 10px 20px; /* Optional padding for spacing */
+ }
+ 
+ body .content1 {
+  background: linear-gradient(135deg, #0d0267, #4f4ff5);
+   width: 100%;
+   text-align: center;
+   margin-top: auto; /* Push this section to the bottom */
+   padding-bottom: 20px;
+ }
+ 
+ body .chathead h1 {
+   color: #ffffff;
+   font-size: 50px;
+   margin: 0; /* Reset default margin */
+   flex-grow: 1; /* Allow h1 to take up space */
+   text-align: center; /* Ensure h1 text is centered */
+ }
+ 
+ 
+ /* Optional: Add responsive design for smaller screens */
+ @media (max-width: 768px) {
+   body .content1 h1 {
+     font-size: 35px; /* Adjust font size for smaller screens */
+   }
+ }
+ 
+ 
+ 
+ body .chat-box {
+   font-family: Arial, sans-serif;
+   background-color: #f1f1f1;
+   margin: 0;
+   border-radius: 8px;
+   padding: 20px;
+   margin-bottom: 20px;
+   height: 540px;
+   overflow-y: auto;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ }
+ 
+ 
+ .messages1 {
+   display: flex;
+   flex-direction: column;
+   padding: 5px;
+ 
+ }
+ 
+ .message {
+   display: inline-block;
+   max-width: 75%;
+   padding: 10px;
+   border-radius: 5px;
+   margin-bottom: 10px;
+   word-wrap: break-word;
+  
+ }
+ 
+ .message.question {
+   background-color: #2d4f93;
+   color: #ffffff;
+   margin-left: auto;
+   text-align: right;
+ 
+ }
+ 
+ .message.answer {
+   background-color: #ffffff;
+   margin-right: auto;
+   text-align: left;
+   border: 1px solid #ccc;
+   
+ }
+ 
+ .chat-form {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  align-items: center;
+  gap: 15px; /* Spacing between input and button */
+  margin-top: 20px;
+  padding: 10px; /* Add padding for a cleaner look */
+
+  border-radius: 10px; /* Rounded edges for the chat form container */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.chat-form input[type="text"] {
+  flex: 1;
+  height: 20px; /* Slightly larger height for better usability */
+  padding: 12px 15px; /* Comfortable padding */
+  border-radius: 25px; /* More rounded for a modern appearance */
+  border: 1px solid #d0d0d0; /* Light gray border for a clean look */
+  font-size: 20px; /* Larger font size for readability */
+  color: #333; /* Dark text for contrast */
+  background: #ffffff; /* Clean white background */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: border 0.3s, box-shadow 0.3s; /* Smooth hover effects */
+  margin-top: 3px;
+}
+.chat-form input[type="text"]:focus {
+  outline: none; /* Remove default focus outline */
+  border: 1px solid #007bff; /* Highlighted border on focus */
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Glow effect on focus */
+}
+
+.chat-form input[type="text"]::placeholder {
+  color: #aaa; /* Subtle placeholder color */
+  font-style: italic; /* Placeholder text style */
+}
+
+.chat-form button {
+  padding: 12px 24px; /* Adjusted for better alignment with the input field */
+  border-radius: 25px; /* Rounded to match the input field */
+  background: linear-gradient(45deg, #4facfe, #00f2fe); /* Consistent modern gradient */
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for button */
+}
+
+.chat-form button:hover {
+  background: linear-gradient(45deg, #00f2fe, #4facfe); /* Reverse gradient */
+  transform: translateY(-3px); /* Lift effect */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+.chat-form button {
+  padding: 12px 24px; /* Slightly larger for a modern look */
+  border-radius: 30px; /* More rounded for a contemporary design */
+  background: linear-gradient(45deg, #4facfe, #00f2fe); /* Attractive gradient */
+  color: #ffffff;
+  font-size: 16px; /* Slightly larger font for readability */
+  font-weight: bold; /* Emphasized text */
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  transition: all 0.3s ease; /* Smooth animations */
+}
+
+.chat-form button:hover {
+  background: linear-gradient(45deg, #00f2fe, #4facfe); /* Reverse gradient on hover */
+  transform: translateY(-3px); /* Lift effect */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+}
+
+.chat-form button:active {
+  transform: translateY(1px); /* Subtle click effect */
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2); /* Reduced shadow */
+}
